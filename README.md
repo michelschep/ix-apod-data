@@ -5,6 +5,7 @@ Nasa publishes a APOD every day (of course :-)): http://apod.nasa.gov/apod/
 
 With the apod webcomponent it is possible to have an apod image on your website:
 
+```html
 <html>
 ...
 <body>
@@ -17,4 +18,4 @@ With the apod webcomponent it is possible to have an apod image on your website:
 
 </body>
 </html>
-
+```
