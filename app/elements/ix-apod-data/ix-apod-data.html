@@ -9,31 +9,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="..\..\bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
 
 <dom-module id="ix-apod-data">
   <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
-    <div>Hello from <span>{{foo}}</span></div>
+    <iron-ajax auto url="https://api.nasa.gov/planetary/apod?concept_tags=True&api_key=DEMO_KEY" handle-as="json" last-response="{{lastResponse}}" debounce-duration="300"></iron-ajax>
   </template>
   <script>
-  (function() {
-    'use strict';
+    (function() {
+      'use strict';
 
-    Polymer({
-      is: 'ix-apod-data',
+      Polymer({
+        is: 'ix-apod-data',
 
-      properties: {
-        foo: {
-          type: String,
-          value: 'ix-apod-data',
-          notify: true
+        properties: {
+          apod: {
+            type: Object,
+            value: {
+              url: "https://api.nasa.gov/images/logo.png"
+            },
+            notify: true
+          }
+        },
+
+        observers: [
+          '_lastResponseChanged(lastResponse)'
+        ],
+
+        _lastResponseChanged: function(lastResponse) {
+          this.set('apod', lastResponse);
         }
-      }
-    });
-  })();
+      });
+    })();
   </script>
 </dom-module>
