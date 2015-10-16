@@ -7,9 +7,20 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+<!--
+A simple data element that handles the NASA APOD API request.
 
-<link rel="import" href="..\..\bower_components/polymer/polymer.html">
-<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+Example:
+
+  &lt;ix-apod-data apod="{{apod}}">&lt;/ix-apod-data>
+
+@group ix
+@element ix-apod-data
+@demo demo/index.html
+@hero hero.svg
+-->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
 
 <dom-module id="ix-apod-data">
   <template>
@@ -25,8 +36,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         properties: {
           apod: {
             type: Object,
-            value: {
-              url: "https://api.nasa.gov/images/logo.png"
+            value: function() {
+              return {
+                url: "https://api.nasa.gov/images/logo.png"
+              }
             },
             notify: true
           }

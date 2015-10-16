@@ -7,9 +7,29 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-image/iron-image.html">
+<link rel="import" href="ix-apod-data.html">
+<!--
+An element that can be used to show the Astronomy Picture of the Day
 
-<link rel="import" href="..\..\bower_components/polymer/polymer.html">
-<link rel="import" href="../ix-apod-data/ix-apod-data.html">
+Nasa publishes a APOD every day (of course :-)): http://apod.nasa.gov/apod/
+The ix-apod element uses the ix-apod-data element.
+The last one uses NASA's apod API to retrieve the apod data:
+https://api.nasa.gov/api.html#apod
+For now only the url in the response object is used.
+
+With the apod webcomponent it is possible to have an apod image on your website.
+
+Example:
+
+  &lt;ix-apod>&lt;/ix-apod>
+
+@group ix
+@element ix-apod
+@demo demo/index.html
+@hero hero.svg
+-->
 
 <dom-module id="ix-apod">
   <template>
@@ -24,7 +44,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
     (function() {
       'use strict';
-
       Polymer({
         is: 'ix-apod',
       });
