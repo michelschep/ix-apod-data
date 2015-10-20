@@ -6,6 +6,7 @@
   ],
   "description": "An element that displays NASA's Astronomy Picture of the Day.",
   "keywords": [
+    "web-components",
     "web-component",
     "polymer",
     "apod",
