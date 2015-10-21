@@ -1,8 +1,8 @@
 {
   "name": "ix-apod",
-  "version": "0.1",
+  "version": "1.0",
   "authors": [
-    "Michel Shep <elschepo@gmail.com>"
+    "Michel Schep <elschepo@gmail.com>"
   ],
   "description": "An element that displays NASA's Astronomy Picture of the Day.",
   "keywords": [
