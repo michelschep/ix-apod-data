@@ -1,10 +1,10 @@
 {
-  "name": "ix-apod",
-  "version": "1.0.2",
+  "name": "ix-apod-data",
+  "version": "0.1",
   "authors": [
     "Michel Schep <elschepo@gmail.com>"
   ],
-  "description": "An element that displays NASA's Astronomy Picture of the Day.",
+  "description": "An element retrieves NASA's Astronomy Picture of the Day.",
   "keywords": [
     "web-components",
     "web-component",
@@ -12,9 +12,9 @@
     "apod",
     "NASA"
   ],
-  "main": "ix-apod.html",
+  "main": "ix-apod-data.html",
   "license": "http://polymer.github.io/LICENSE.txt",
-  "homepage": "https://github.com/michelschep/ix-apod/",
+  "homepage": "https://github.com/michelschep/ix-apod-data/",
   "ignore": [
     "/.*",
     "/test/"
