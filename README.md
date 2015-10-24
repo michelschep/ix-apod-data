@@ -1,4 +1,4 @@
-# ix-apod web component
+# ix-apod-data web component
 Webcomponent that can be used to retrieve the Astronomy Picture of the Day data
 
 Nasa publishes a APOD every day (of course :-)): http://apod.nasa.gov/apod/
